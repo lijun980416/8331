@@ -1,0 +1,67 @@
+.one{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background: #f5c6de;
+  width: 100vw;
+}
+.two{
+  width: 80%;
+  height: 40px;
+}
+.three{
+  display: flex;
+  flex-direction: row;
+}
+.three view{
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  line-height: 40px;
+}
+.plus{
+  width: 20%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.selected{
+  font-weight: bold;
+}
+.aa{
+  height: 80vh;
+}
+.bb{
+  display: flex;
+  flex-direction: column;
+}
+.ee{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.cc{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.dd{
+  display: flex;
+  flex-direction: row;
+}
+.dd image{
+  width: 30vw;
+  height: 180rpx;
+  margin: 5rpx;
+}
+.ff{
+  display:flex;
+  flex-direction: row;
+  font-size: 14px;
+  justify-content: space-between;
+  color: #aaa;
+}
+.hr{
+  background-color: #aaa;
+  height: 1rpx;
+}

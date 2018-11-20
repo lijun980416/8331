@@ -1,0 +1,37 @@
+<view class='one'>
+  <scroll-view class='two' scroll-x="true">
+    <view class='three'>
+      <view><view class='{{currentType=="top"?"selected":"normal"}}' bindtap='select' id="top">头条</view></view>
+      <view><view class='{{currentType=="shehui"?"selected":"normal"}}' bindtap='select' id="shehui">社会</view></view>
+      <view><view class='{{currentType=="guonei"?"selected":"normal"}}' bindtap='select' id="guonei">国内</view></view>
+      <view><view class='{{currentType=="guoji"?"selected":"normal"}}' bindtap='select' id="guoji">国际</view></view>
+      <view><view class='{{currentType=="jiaoyou"?"selected":"normal"}}' bindtap='select' id="jiaoyou">交友</view></view>
+      <view><view class='{{currentType=="junshi"?"selected":"normal"}}' bindtap='select' id="junshi">军事</view></view>
+      <view><view class='{{currentType=="chezhan"?"selected":"normal"}}' bindtap='select' id="chezhan">车展</view></view>
+      <view><view class='{{currentType=="caijing"?"selected":"normal"}}' bindtap='select' id="caijing">财经</view></view>
+      <view><view class='{{currentType=="keji"?"selected":"normal"}}' bindtap='select' id="keji">科技</view></view>
+      <view><view class='{{currentType=="shishang"?"selected":"normal"}}' bindtap='select' id="shishang">时尚</view></view>
+    </view>
+  </scroll-view>
+  <view class='plus'>+</view>
+</view>
+
+<scroll-view class='aa' scroll-y="true">
+    <view class='bb'>
+      <block wx:for="{{newsList}}" wx:key="uniquekey">
+        <view class='ee' bindtap='showDetail' id='{{item.url}}'>
+          <view class='cc'><text>{{item.title}}</text></view>
+          <view class='dd'>
+            <view><image src="{{item.thumbnail_pic_s}}"/></view>
+            <view><image src="{{item.thumbnail_pic_s02}}"/></view>
+            <view><image src="{{item.thumbnail_pic_s03}}"/></view>
+          </view>
+          <view class='ff'>
+            <view class='gg'>{{item.author_name}}</view>
+            <view class='hh'>{{item.date}}</view>
+          </view>
+          <view class='hr'></view>
+        </view>
+      </block>
+    </view>
+</scroll-view>
