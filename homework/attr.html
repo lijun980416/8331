@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function a () {
+			var s="China is my country";
+			var f=s.charAt(0);
+			var l=s.charAt(s.length-1);
+			console.log("new string:"+(f+l)); 
+		}
+		a();
+		function b(filename){
+			var dotAt=filename.lastIndexOf('.');
+			var surfix=filename.substr(dotAt);
+			console.log(surfix);
+		}
+		b('A.txt');
+
+		function c(filename){
+			var d=filename.lastIndexOf('.');//从后面开始找'.'
+			var s=filename.substr(d);//从d位置，向后取子串
+			console.log(s);
+			var q=filename.substring(0,d+1);//包含'.'
+			console.log(q);
+		}
+		c("a.b.txt");
+
+		function changeName(filename){
+			var d=filename.lastIndexOf('.');
+			var s=filename.substr(d);
+			return "myName"+s;
+		}
+		console.log(changeName("hello.html"));
+
+		function d(){
+			s="china is my country";
+			var a=s.split(' ');//  将字符串按空格分割成一个数组
+			for(var i=0;i<a.length;i++){
+				console.log(i+":"+a[i]);
+			}
+		}
+		d();
+
+		function d2(){
+			s="china is my country";
+			var a=0;
+			while (true) {
+				var b=s.indexOf(' ', a);
+				if(-1!=b){
+					console.log(s.substring(a,b));
+				}
+				else{
+					console.log(s.substring(a));
+					break;
+				}
+				a=b+1;
+			}
+		}
+		d2();
+
+
+		function e(){
+			s="java is a primary programming language. ";
+			for(var i=0,b=0;true;i++,b++){
+				i=s.indexOf('a',i);
+				if(-1==i){
+					break;
+				}
+			}
+			console.log(b);
+
+		}
+		e();
+
+
+
+
+	</script>
+	
+</body>
+</html>
